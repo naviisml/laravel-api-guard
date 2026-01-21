@@ -1,0 +1,35 @@
+{
+    "name": "naviisml/laravel-api-guard",
+    "description": "A API guard for Laravel.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Navi Ismail",
+            "email": "contact@navel.dev"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Naviisml\\ApiGuard\\ApiServiceProvider",
+                "Naviisml\\ApiGuard\\Providers\\AuthServiceProvider"
+            ],
+            "aliases": []
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Naviisml\\ApiGuard\\Database\\Factories\\": "database/factories/",
+            "Naviisml\\ApiGuard\\Database\\Seeders\\": "database/seeders/",
+            "Naviisml\\ApiGuard\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Naviisml\\ApiGuard\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
