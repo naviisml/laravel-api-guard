@@ -14,6 +14,7 @@ use Naviisml\Multitenancy\Models\Concerns\UsesTenantConnection;
 
 /**
  * @property string $id
+ * @property int|null $user_id
  * @property string $public_key
  * @property string $private_key
  * @property DateTime $revoked_at
@@ -40,6 +41,7 @@ class ApiKey extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'user_id',
         'public_key',
         'private_key',
         'revoked_at',
@@ -52,6 +54,7 @@ class ApiKey extends Model
      */
     protected $casts = [
         'revoked_at' => 'datetime',
+        'user_id' => 'integer',
         'public_key' => 'string',
         'private_key' => 'encrypted:string',
     ];
