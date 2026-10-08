@@ -26,8 +26,8 @@ class AuthServiceProvider extends ServiceProvider
         $guards = Config::get('auth.guards', []);
 
         // Add the custom API guard dynamically
-        $guards['apikey'] = [
-            'driver' => 'apikey', // Ensure this matches your Auth::extend name
+        $guards['apikey'] ??= [
+            'driver' => 'apikey',
             'provider' => 'users',
         ];
 
