@@ -32,6 +32,7 @@ class ApiServiceProvider extends PackageServiceProvider
             ->runsSeeders()
             ->hasMigrations([
                 '2024_06_07_114311_create_api_keys_table',
+                '2026_10_09_000000_add_api_key_user_id',
             ])
             ->runsMigrations()
             ->hasInstallCommand(function (InstallCommand $command) {
