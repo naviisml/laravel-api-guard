@@ -19,10 +19,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        if (Schema::hasTable('api_keys') && Schema::hasColumn('api_keys', 'user_id')) {
-            Schema::table('api_keys', function (Blueprint $table): void {
-                $table->dropColumn('user_id');
-            });
-        }
+        // Keep the owner column: another application migration may own it.
     }
 };
